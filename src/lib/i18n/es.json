@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "Chat DCC",
+    "description": "Asistente inteligente del DCC"
+  },
+  "auth": {
+    "signin": "Iniciar Sesión",
+    "signout": "Cerrar Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "vtiLogin": "Autenticarse con U-Pasaporte / VTI",
+    "or": "o",
+    "invalidCredentials": "Credenciales inválidas",
+    "welcome": "Bienvenido"
+  },
+  "chat": {
+    "placeholder": "Escribe tu mensaje...",
+    "send": "Enviar",
+    "thinking": "Pensando...",
+    "welcome": "¡Hola! Soy el asistente del DCC. ¿En qué puedo ayudarte?",
+    "errorGeneric": "Ocurrió un error. Intenta de nuevo."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "chat": "Chat"
+  },
+  "services": {
+    "title": "Servicios DCC"
+  },
+  "rooms": {
+    "title": "Reserva de Salas",
+    "availability": "Disponibilidad",
+    "reserve": "Reservar"
+  }
+}

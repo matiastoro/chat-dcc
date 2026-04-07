@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "Chat DCC",
+    "description": "DCC Intelligent Assistant"
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signout": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "vtiLogin": "Authenticate with U-Pasaporte / VTI",
+    "or": "or",
+    "invalidCredentials": "Invalid credentials",
+    "welcome": "Welcome"
+  },
+  "chat": {
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "welcome": "Hello! I'm the DCC assistant. How can I help you?",
+    "errorGeneric": "An error occurred. Please try again."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "chat": "Chat"
+  },
+  "services": {
+    "title": "DCC Services"
+  },
+  "rooms": {
+    "title": "Room Reservation",
+    "availability": "Availability",
+    "reserve": "Reserve"
+  }
+}
