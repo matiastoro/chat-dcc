@@ -1,21 +1,19 @@
 import { tool } from "ai";
 import { z } from "zod";
 
-const SAR_API_URL =
-  process.env.ROOMS_API_URL ??
-  "https://apps.dcc.uchile.cl/sistema_administracion_recursos";
-const SAR_API_KEY = process.env.SAR_API_KEY ?? "";
-
-const authHeaders = {
-  Authorization: `Bearer ${SAR_API_KEY}`,
-  "Content-Type": "application/json",
-};
-
 async function sarFetch(path: string, options?: RequestInit) {
-  const url = `${SAR_API_URL}${path}`;
+  const sarApiUrl =
+    process.env.ROOMS_API_URL ??
+    "https://apps.dcc.uchile.cl/sistema_administracion_recursos";
+  const sarApiKey = process.env.SAR_API_KEY ?? "";
+  const url = `${sarApiUrl}${path}`;
   const res = await fetch(url, {
     ...options,
-    headers: { ...authHeaders, ...options?.headers },
+    headers: {
+      Authorization: `Bearer ${sarApiKey}`,
+      "Content-Type": "application/json",
+      ...options?.headers,
+    },
   });
   const data = await res.json().catch(() => ({}));
   if (!res.ok) return { error: true, status: res.status, ...data };
