@@ -6,6 +6,7 @@ async function sarFetch(path: string, options?: RequestInit) {
     process.env.ROOMS_API_URL ??
     "https://apps.dcc.uchile.cl/sistema_administracion_recursos";
   const sarApiKey = process.env.SAR_API_KEY ?? "";
+  console.log("[sarFetch] SAR_API_KEY present:", !!sarApiKey, "length:", sarApiKey.length);
   const url = `${sarApiUrl}${path}`;
   const res = await fetch(url, {
     ...options,
