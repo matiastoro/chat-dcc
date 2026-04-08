@@ -74,12 +74,14 @@ export async function GET(request: NextRequest) {
       secret: process.env.NEXTAUTH_SECRET!,
     });
 
-    const isSecure = request.nextUrl.protocol === "https:";
+    // Use NEXTAUTH_URL as base for redirect (nginx proxies as localhost internally)
+    const baseUrl = process.env.NEXTAUTH_URL || request.url;
+    const isSecure = baseUrl.startsWith("https:");
     const cookieName = isSecure
       ? "__Secure-next-auth.session-token"
       : "next-auth.session-token";
 
-    const response = NextResponse.redirect(new URL("/dashboard", request.url));
+    const response = NextResponse.redirect(new URL("/dashboard", baseUrl));
     response.cookies.set(cookieName, sessionToken, {
       httpOnly: true,
       secure: isSecure,
